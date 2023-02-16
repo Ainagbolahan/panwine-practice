@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
+
+// mongoose.set('strictQuery', true);
 const ConnectToDB = async () => {
   try {
     console.log(process.env.DB_URL);
@@ -13,7 +15,7 @@ const ConnectToDB = async () => {
 };
 
 const appStarter = (port) => {
-  console.log("connected to db" + port);
+  console.log("connected to db " + port);
   ConnectToDB();
 };
 
